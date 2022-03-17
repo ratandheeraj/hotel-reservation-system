@@ -36,7 +36,7 @@ public class Room implements IRoom{
 
     @Override
     public String toString(){
-        return "Room Details:\n"+"Room number: "+roomNumber+"\nPrice: "+price+"\nRoom type: "+enumeration+" Bed\n";
+        return "Room Details:\n"+"Room number: "+roomNumber+"\nPrice: "+price+"\nRoom type: "+enumeration+" Bed";
     }
 
     @Override
@@ -44,11 +44,9 @@ public class Room implements IRoom{
         if(object == this) {
             return true;
         }
-
         if(!(object instanceof Room)) {
             return false;
         }
-
         Room room = (Room) object;
         return Objects.equals(this.roomNumber, room.roomNumber);
     }

@@ -2,6 +2,11 @@ import api.AdminResource;
 import model.*;
 import java.util.*;
 
+/**
+ * This is the admin menu which has options to view reservations, customers, rooms and also can create rooms
+ * @author Ratan Dheeraj Kadirikota
+ */
+
 public class AdminMenu {
     public static void adminMenu(){
         Scanner sc = new Scanner(System.in);
@@ -29,6 +34,7 @@ public class AdminMenu {
         }
 
     }
+
     public static void printAdminMenu()
     {
         System.out.println("***Welcome to Admin Menu***");
@@ -37,6 +43,7 @@ public class AdminMenu {
         System.out.println("-----------------------------------");
         System.out.println("Select an option from the menu");
     }
+
     public static IRoom addARoom() {
         String roomNumber, roomType;
         double price;
@@ -57,6 +64,7 @@ public class AdminMenu {
             return null;
         }
     }
+
     public static void addRooms(){
         List<IRoom> rooms = new ArrayList<>();
         String choice;
@@ -85,18 +93,21 @@ public class AdminMenu {
         }
         AdminResource.addRoom(rooms);
     }
+
     public static void seeAllRooms(){
         Collection<IRoom> rooms = AdminResource.getAllRooms();
         for(IRoom room:rooms){
             System.out.println(room.toString());
         }
     }
+
     public static void seeAllCustomers(){
         Collection<Customer> customers = AdminResource.getAllCustomer();
         for(Customer customer:customers){
             System.out.println(customer.toString());
         }
     }
+
     public static void seeAllReservations(){
         AdminResource.displayAllReservations();
     }
