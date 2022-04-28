@@ -27,10 +27,12 @@ public class AdminMenu {
                 }
                 else{
                     System.out.println("Invalid input");
+                    adminMenu();
                 }
             }while(Integer.parseInt(choice) != 5 );
         }catch (Exception ex){
             System.out.println("Invalid input received.");
+            adminMenu();
         }
 
     }

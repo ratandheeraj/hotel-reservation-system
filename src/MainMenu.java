@@ -36,6 +36,7 @@ public class MainMenu {
             }while(Integer.parseInt(choice) != 5 );
         }catch (Exception ex){
             System.out.println("Invalid input received.");
+            mainMenu();
         }
 
     }
